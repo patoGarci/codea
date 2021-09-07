@@ -3,7 +3,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: #FF0080;
-    height: 80px;
+    height: 40px;
     padding-left: 10px;
     .left{
         height: 25%;
@@ -15,15 +15,15 @@ nav{
     .logo{
         z-index: 1;
         position: relative;
-        width: 230px;
-        height: 140px;
+        width: 140px;
+        height: 70px;
         border-top: 3px #FF0080 solid;
         border-bottom: 3px #FF0080 solid;
     }
     .dropdown-menu {
         margin-right: 20px;
         #drop-down-menu-items {
-            margin-top: 180px;
+            margin-top: 140px;
             z-index: 2;
             width: 100%;
             position: absolute;
@@ -126,6 +126,7 @@ nav{
         height: 45px;
         .logo{
             height: 120px;
+            width: 240px;
         }
         .dropdown-menu{
             margin-right: 100px;
