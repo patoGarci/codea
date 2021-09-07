@@ -1,0 +1,38 @@
+footer{
+    padding: 0 7% 0 5%;
+    margin-top: 50px;
+    background-color: #FF0080;
+    height: 200px;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .list{
+        justify-content: space-between;
+        height: 80px;
+        list-style: none;
+        line-height: 18px;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 12%;
+        li{
+            h1,h6,h5{
+                margin: 0;
+            }
+            h6{
+                font-size: 6px;
+                padding-left: 40px;
+            }
+            h5{
+                font-size: 11px;
+            }
+        }
+        .redes{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+    }
+}

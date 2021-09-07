@@ -17,13 +17,40 @@ nav{
         position: relative;
         width: 140px;
         height: 70px;
-        border-top: 3px #FF0080 solid;
-        border-bottom: 3px #FF0080 solid;
+        img{
+            margin-left: 2%;
+            justify-content: center;
+            width: 97%;
+            height: 100%;
+            border-top: 3px #FF0080 solid;
+            border-bottom: 3px #FF0080 solid;
+        }
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #FF0080;
+            width: 1%;
+            left: 1%;
+            top: 75.5%;
+            height: 30%;
+
+        }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #FF0080;
+            width: 1%;
+            right: 0;
+            top: 0;
+            height: 33%;
+        }
     }
     .dropdown-menu {
         margin-right: 20px;
         #drop-down-menu-items {
-            margin-top: 140px;
+            margin-top: 57px;
             z-index: 2;
             width: 100%;
             position: absolute;
