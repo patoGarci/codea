@@ -1,0 +1,166 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF0080;
+    height: 80px;
+    padding-left: 10px;
+    .left{
+        height: 25%;
+        background-color: rgb(236, 13, 188);
+        width: 1px;
+        margin: 0;
+        border: none;
+    }
+    .logo{
+        z-index: 1;
+        position: relative;
+        width: 230px;
+        height: 140px;
+        border-top: 3px #FF0080 solid;
+        border-bottom: 3px #FF0080 solid;
+    }
+    .dropdown-menu {
+        margin-right: 20px;
+        #drop-down-menu-items {
+            margin-top: 180px;
+            z-index: 2;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            overflow: hidden;
+            list-style: none;
+            background-color:  #FF0080;
+            height: 0px;
+            transition: height 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            li {
+                position: relative;
+                &:hover {
+                    background-color: #f7bad4;
+                }
+                a {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 22px;
+                    font-weight: 400;
+                    position: relative;
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 16px 5%;
+                    line-height: 28px;
+                    display: block;
+                    &:hover {
+                        background-color: #f7bad4;
+                        color: #fff;
+                    }
+                }
+            }
+            i{
+                padding: 16px 5%;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+        input {
+            opacity: 0;
+            display: block;
+            width: 28px;
+            height: 22px;
+            z-index: 4;
+            position: absolute;
+            &:checked ~ span {
+                opacity: 1;
+                z-index: 3;
+                background-color: #fff;
+                transform: rotate(45deg) translate(2px, 1px);
+            }
+            &:checked ~ span:nth-last-child(3) {
+                opacity: 0;
+                transform: rotate(0deg) scale(0.2, 0.2);
+            }
+            &:checked ~ span:nth-last-child(2) {
+                transform: rotate(-45deg) translate(1px, 0px);
+            }
+            &[type="checkbox"]:checked ~ #drop-down-menu-items {
+                top: 0px;
+                height: 300px;
+                transition: height 0.5s ease-in-out;
+            }
+        }
+        span {
+            margin-left: 7px;
+            display: block;
+            width: 25px;
+            height: 2.5px;
+            margin-bottom: 6.5px;
+            position: relative;
+            background-color:white;
+            z-index: 1;
+            transform-origin: 3px 0px;
+            transition: opacity 0.55s ease,
+            -webkit-transform 0.5s ease;
+            transition: transform 0.5s ease,
+            opacity 0.55s ease;
+            transition: transform 0.5s ease,
+            opacity 0.55s ease,
+            -webkit-transform 0.5s ease;
+            &:first-child {
+                -webkit-transform-origin: 0% 0%;
+                transform-origin: 0% 0%;
+            }
+            &:nth-last-child(2) {
+                -webkit-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav{
+        padding-left: 60px;
+        height: 45px;
+        .logo{
+            height: 120px;
+        }
+        .dropdown-menu{
+            margin-right: 100px;
+            #drop-down-menu-items {
+                margin-top: 15px;
+                position: relative;
+                // top: 0;
+                right: 0;
+                overflow: hidden;
+                background: unset;
+                height: unset;
+                flex-direction: row;
+                li {
+                    padding: 10px;
+                    display: inline-block;
+                    &:hover a {
+                        color: #fff;
+                    }
+                    &:hover i {
+                        color: #fff;
+                    }
+                    a, i {
+                        cursor: pointer;
+                        padding: unset;
+                        line-height: unset;
+                        color: #fff
+                    }
+                }
+            }
+            input {
+                display: none;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+}

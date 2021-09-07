@@ -1,0 +1,11 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+@import './partials/header';
+@import './partials/nav';
+@import './partials/main';
+@import './partials/section'

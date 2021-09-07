@@ -1,0 +1,40 @@
+main{
+    position: relative;
+    .logo-main{
+        position: absolute;
+        width: 100%;
+        height: 300px;
+    }
+    .message{
+        left: 15px;
+        position: absolute;
+        margin-top: 35%;
+        width: 70%;
+        font-size: 20px;
+        p{
+            margin: 0;
+        }
+        .span-color-pink{
+            color: #FF0080;
+        }
+        .small-letter{
+            margin-top: 10px;
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main{
+        .logo-main{
+            height: 500px;
+        }
+        .message{
+            left: 100px;
+            margin-top: 20%;
+            width: 30%;
+            font-size: 30px;
+        }
+    }
+}

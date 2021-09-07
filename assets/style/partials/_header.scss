@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(255, 246, 248);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    p{
+        margin-right: 20px;
+        color: gray;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    header{
+        height: 40px;
+        p{
+            margin-right: 100px;
+        }
+    }
+  }
