@@ -352,8 +352,9 @@ section .cards .card-items-active {
 }
 
 section .cards .card-items-active .card-items {
-  border: 1px red solid;
-  padding-top: 15px;
+  -webkit-box-shadow: 5px 6px 29px -5px gray;
+          box-shadow: 5px 6px 29px -5px gray;
+  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,11 +390,8 @@ section .cards .card-items-active .card-items button {
   cursor: pointer;
   height: 30px;
   width: 80%;
-  background-color: gray;
-}
-
-section .cards .card-items-active .card-items button:focus {
-  background-color: #FF0080;
+  background-color: #686c5e;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -409,13 +407,31 @@ section .cards .card-items-active .card-items button:focus {
     font-size: 20px;
   }
   section .cards {
-    width: 80%;
+    width: 90%;
   }
   section .cards .card-items-active {
-    width: 30%;
+    width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  section .cards .card-items-active .border-box-pink {
+    opacity: 0;
+    width: 170px;
+    height: 200px;
+    overflow: hidden;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    border: 3px solid #FF0080;
+    position: absolute;
+  }
+  section .cards .card-items-active .card-items {
+    background-color: white;
+    margin-left: 3%;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
   }
   section .cards .card-items-active .card-items img {
     height: 300px;
