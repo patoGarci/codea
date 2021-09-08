@@ -8,5 +8,16 @@ cards.addEventListener("click",(e)=>{
     buttonCardSelected.style.background = " #FF0080";
     //Activa el borde rosa, externo
     borderBoxPink.style.opacity="1"
-
 })
+
+
+//primera vez en la pagina
+onload()
+function onload(){
+    if (localStorage.onload) {
+        localStorage.onload = Number(localStorage.onload) + 1;
+    } else {
+        localStorage.onload = 1;
+        modal.style.display ="block";
+    }
+}

@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+         <a class="modal-hide" href="./index.html"><i class="fas fa-times"></i></a>
+            Bienvenido a Deplive <br>
+            "Brillas por dentro y por fuera"
+       </div>
+     </div>
     <header>
         <p>123456789 / +57 987 654 3210</p>
     </header>
@@ -33,7 +40,7 @@
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3BhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
         alt="oil falling on the hand of a brunette woman and 2 two backs of light women" class="logo-main">
         <div class="message">
-            <p><span class="span-color-pink">Trabajamos</span> para tu<br> Salud y tu<span class="span-color-pink"> <b>Belleza</b></span></p>
+            <p><span class="span-color-pink">Trabajamos</span> para tu<br/> Salud y tu<span class="span-color-pink"> <b>Belleza</b></span></p>
             <p class="small-letter">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente aliquid vel explicabo iure. Sequi necessitatibus suscipit velit expedita.</p>
         </div>
     </main>
@@ -78,21 +85,23 @@
         </div>
     </section>
     <footer>
-        <ul class="list" style="text-align: center;">
+        <ul class="list" style="text-align: center;" id="logo">
             <li><h1>Depilive</h1><h6>Depilacion & estetica</h6></li>
             <br>
             <li><h5>Depile <i class="far fa-copyright"></i> 2021 todos los  <br> <span> derechos reservados</span></h5></li>
         </ul>
-        <ul class="list">
-            <li><h1>Nosotros</h1></li>
-            <li><h5>Quienes somos?</h5></li>
-            <li><h5>Contactenos</h5></li>
-        </ul>
-        <ul class="list">
-            <li><h1>Politicas</h1></li>
-            <li><h5>Terminos y condiciones</h5></li>
-            <li><h5>Politicas de privacidad</h5></li>
-        </ul>
+        <div class="dropdown-menu-footer">
+            <ul class="list" style="margin: 0;">
+                <li><h1>Nosotros</h1></li>
+                <li><h5>Quienes somos?</h5></li>
+                <li><h5>Contactenos</h5></li>
+            </ul>
+            <ul class="list" style="margin: 0;" id="politicas">
+                <li><h1>Politicas</h1></li>
+                <li><h5>Terminos y condiciones</h5></li>
+                <li><h5>Politicas de privacidad</h5></li>
+            </ul>
+        </div>
         <ul class="list">
             <li><h1>Siguenos</h1></li>
             <li class="redes"><i class="fab fa-facebook-f"></i>

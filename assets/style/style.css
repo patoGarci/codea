@@ -7,6 +7,89 @@ body {
           box-sizing: border-box;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding: 10% 20%;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-animation: modal-show 0.5s 1 forwards;
+          animation: modal-show 0.5s 1 forwards;
+}
+
+.modal-content {
+  z-index: 4;
+  position: relative;
+  width: 50%;
+  height: 110px;
+  padding: 10px;
+  background-color: pink;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.modal:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-show {
+  display: inline-block;
+  padding: 12px;
+  background-color: #8bb02c;
+  color: white;
+  font-size: 18px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.modal-hide {
+  z-index: 5;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+@-webkit-keyframes modal-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
   background-color: #fff6f8;
   display: -webkit-box;
@@ -282,13 +365,13 @@ main {
 main .logo-main {
   position: absolute;
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 
 main .message {
   left: 15px;
   position: absolute;
-  margin-top: 15%;
+  margin-top: 250px;
   width: 70%;
   font-size: 20px;
 }
@@ -323,7 +406,7 @@ main .message .small-letter {
 }
 
 section {
-  margin-top: 320px;
+  margin-top: 420px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,9 +508,9 @@ section .cards .card-items-active .card-items button {
   margin-bottom: 5px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   section {
-    margin-top: 550px;
+    margin-top: 520px;
   }
   section .title hr {
     bottom: 3px;
@@ -479,10 +562,10 @@ section .cards .card-items-active .card-items button {
 }
 
 footer {
-  padding: 0 7% 0 5%;
+  padding: 0 10%;
   margin-top: 50px;
   background-color: #FF0080;
-  height: 200px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,6 +577,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer #logo {
+  display: none;
 }
 
 footer .list {
@@ -511,7 +598,6 @@ footer .list {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
-  width: 12%;
 }
 
 footer .list li h1, footer .list li h6, footer .list li h5 {
@@ -535,5 +621,40 @@ footer .list .redes {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 20px;
+}
+
+footer .dropdown-menu-footer {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .dropdown-menu-footer #politicas {
+  margin-top: 30% !important;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 200px;
+  }
+  footer #logo {
+    display: block;
+  }
+  footer .dropdown-menu-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .dropdown-menu-footer #politicas {
+    margin-top: 0 !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

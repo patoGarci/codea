@@ -1,13 +1,16 @@
 footer{
-    padding: 0 7% 0 5%;
+    padding: 0 10%;
     margin-top: 50px;
     background-color: #FF0080;
-    height: 200px;
+    height: 300px;
     display: flex;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    #logo{
+        display: none;
+    }
     .list{
         justify-content: space-between;
         height: 80px;
@@ -16,7 +19,6 @@ footer{
         display: flex;
         flex-direction: column;
         padding: 0;
-        width: 12%;
         li{
             h1,h6,h5{
                 margin: 0;
@@ -33,6 +35,29 @@ footer{
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
+        }
+    }
+    .dropdown-menu-footer{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        #politicas{
+            margin-top: 30% !important;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    footer{
+        height: 200px;
+        #logo{
+            display: block;
+        }
+        .dropdown-menu-footer{
+            flex-direction: row;
+            #politicas{
+                margin-top: 0 !important;
+            }
         }
     }
 }
